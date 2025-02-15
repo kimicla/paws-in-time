@@ -1,0 +1,23 @@
+baseURL = 'https://qiuqiu.qqviaja.com/'
+languageCode = 'en-us'
+title = 'Qiuqiu'
+theme = 'cloudflare-gallery'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]  # Output formats for the homepage
+  page = ["HTML", "JSON"] 
+
+[params]
+  placeholderImage = "/images/placeholder.jpg"  # Optional
+
+[params.cloudflareImages]
+  workerURL = "https://worker-gallery.qqviaja.com/images-api/"
+  # Use environment variables for sensitive data
+  accountHash = ""  # Will be set via environment variable
+  accountID = ""    # Will be set via environment variable
+
+[[menu.main]]
+    identifier = "photos"  
+    name = "Photos"        
+    url = "/"             # Changed to root URL "/" to make it the index/home page
+    weight = 1            # Set to 1 to ensure it appears first in navigation

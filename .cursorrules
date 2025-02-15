@@ -1,0 +1,126 @@
+Website Rules for Paws in Time
+
+Content Organization
+
+- Place all photo galleries under content/photos/
+- Use consistent front matter for all content:
+  - title: Page/gallery title
+  - date: Publication date
+  - description: Brief description
+  - tags: Relevant tags
+  - categories: Content category
+  - featured_image: Main image for the content
+
+Image Guidelines
+
+- Store original images in Cloudflare R2
+- Use Cloudflare Images for optimization:
+  - Maximum width: 2048px for full-size
+  - Thumbnail size: 300x300px
+  - Gallery preview: 800x600px
+- Include alt text for all images
+- Use descriptive filenames (e.g., "golden-retriever-playing-2024.jpg")
+- Implement lazy loading for gallery images
+
+Gallery Structure
+
+- Organize galleries by:
+  - Date
+  - Event type
+  - Pet category
+- Include metadata:
+  - Location
+  - Photographer
+  - Camera settings (if relevant)
+  - Pet information
+
+Performance Requirements
+
+- Page load time < 3 seconds
+- First Contentful Paint < 1.5s
+- Largest Contentful Paint < 2.5s
+- Cumulative Layout Shift < 0.1
+- First Input Delay < 100ms
+
+SEO Guidelines
+
+- Implement proper meta descriptions
+- Use semantic HTML structure
+- Create descriptive URLs
+- Include OpenGraph tags
+- Implement JSON-LD structured data
+- Create XML sitemap
+
+Security Measures
+
+- Enable Cloudflare security features:
+  - WAF (Web Application Firewall)
+  - Bot protection
+  - DDoS mitigation
+- Implement proper CSP headers
+- Use HTTPS everywhere
+- Enable privacy-focused analytics
+
+Responsive Design Requirements
+
+- Breakpoints:
+  - Mobile: 320px - 480px
+  - Tablet: 481px - 768px
+  - Desktop: 769px - 1024px
+  - Large Desktop: 1025px+
+- Mobile-first approach
+- Touch-friendly navigation
+- Optimized gallery grid for each device
+
+Content Guidelines
+
+- High-quality, original photographs only
+- Consistent photo styling
+- Clear, engaging descriptions
+- Proper attribution for all content
+- Regular content updates (minimum monthly)
+
+User Experience
+
+- Clear navigation structure
+- Fast image loading
+- Intuitive gallery browsing
+- Easy sharing functionality
+- Search and filter capabilities
+- Accessible contact information
+
+Maintenance
+
+- Weekly backups of content
+- Monthly performance audits
+- Regular security updates
+- Content freshness reviews
+- Analytics monitoring
+
+Development Workflow
+
+- Use feature branches for new content
+- Test all changes locally first
+- Optimize images before upload
+- Review performance metrics
+- Document all configuration changes
+
+Analytics and Monitoring
+
+- Track key metrics:
+  - Page views
+  - Time on site
+  - Popular galleries
+  - User flow
+  - Device usage
+- Monitor error rates
+- Track performance metrics
+
+Accessibility Standards
+
+- WCAG 2.1 AA compliance
+- Keyboard navigation
+- Screen reader compatibility
+- Sufficient color contrast
+- Clear focus indicators
+- Alternative text for all images 

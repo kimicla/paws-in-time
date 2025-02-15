@@ -1,0 +1,17 @@
+name = "cloudflare-gallery-worker"
+main = "worker.js"
+compatibility_date = "2025-02-10"
+workers_dev = false
+
+routes = [
+  { pattern = "worker-gallery.qqviaja.com", custom_domain = true }
+]
+
+# Secrets that should be set using wrangler
+# Run these commands to set secrets:
+# wrangler secret put CLOUDFLARE_ACCOUNT_ID
+# wrangler secret put CLOUDFLARE_API_TOKEN
+# wrangler secret put CLOUDFLARE_ACCOUNT_HASH
+
+[observability.logs]
+enabled = true

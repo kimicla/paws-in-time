@@ -1,0 +1,11 @@
+{
+  "name": "cloudflare-gallery-worker",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node server.js",
+    "deploy": "node deploy.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+} 
