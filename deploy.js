@@ -7,9 +7,7 @@ dotenv.config();
 
 // Set secrets in Wrangler
 const secrets = [
-    'CLOUDFLARE_ACCOUNT_ID',
-    'CLOUDFLARE_API_TOKEN',
-    'CLOUDFLARE_ACCOUNT_HASH'
+    'CLOUDFLARE_API_TOKEN'
 ];
 
 // Deploy worker
@@ -31,6 +29,19 @@ secrets.forEach(secret => {
 
 // Build Hugo with environment variables
 try {
+    // First ensure theme is present
+    if (!fs.existsSync('./themes')) {
+        console.error('❌ Themes directory not found');
+        process.exit(1);
+    }
+    
+    // Verify API token exists
+    if (!process.env.CLOUDFLARE_API_TOKEN) {
+        console.error('❌ Missing CLOUDFLARE_API_TOKEN in .env file');
+        process.exit(1);
+    }
+    
+    console.log('🔨 Building Hugo site...');
     execSync('hugo --environment production', {
         env: {
             ...process.env,
@@ -38,9 +49,21 @@ try {
         },
         stdio: 'inherit'
     });
+    
+    // Verify build output
+    if (!fs.existsSync('./public')) {
+        console.error('❌ Build failed: public directory not created');
+        process.exit(1);
+    }
+    
+    // List contents of public directory
+    console.log('📁 Built files:');
+    execSync('ls -la public', { stdio: 'inherit' });
+    
     console.log('✅ Hugo site built successfully');
 } catch (error) {
     console.error('Failed to build Hugo site:', error);
+    console.error('Build error details:', error.message);
     process.exit(1);
 }
 

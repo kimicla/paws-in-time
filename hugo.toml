@@ -12,9 +12,8 @@ theme = 'cloudflare-gallery'
 
 [params.cloudflareImages]
   workerURL = "https://worker-gallery.qqviaja.com/images-api/"
-  # Use environment variables for sensitive data
-  accountHash = ""  # Will be set via environment variable
-  accountID = ""    # Will be set via environment variable
+  accountHash = "W_2keQlBhLiZqemRqewoUA"
+  accountID = "2796216706dc27857293e665688e4acb"
 
 [[menu.main]]
     identifier = "photos"  
