@@ -21,3 +21,7 @@ theme = 'cloudflare-gallery'
     name = "Photos"        
     url = "/"             # Changed to root URL "/" to make it the index/home page
     weight = 1            # Set to 1 to ensure it appears first in navigation
+
+[module]
+  [[module.imports]]
+    path = "cloudflare-gallery"
