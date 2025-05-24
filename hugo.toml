@@ -9,6 +9,7 @@ theme = 'cloudflare-gallery'
 
 [params]
   placeholderImage = "/images/placeholder.jpg"  # Optional
+  googleAdsense = "5748363844796033"
 
 [params.cloudflareImages]
   workerURL = "https://worker-gallery.qqviaja.com/images-api/"
